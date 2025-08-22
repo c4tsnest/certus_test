@@ -1,0 +1,136 @@
+(version 1)
+
+# https://jlcpcb.com/capabilities/pcb-capabilities
+
+# clearance
+(rule "clearance_hole_to_hole_different_nets"
+   (constraint hole_to_hole (min 0.5mm))
+   (condition "A.Net != B.Net"))
+
+# Via Hole-to-Hole Spacing
+(rule "clearance_via_to_via_same_nets"
+   (constraint hole_to_hole (min 0.2mm))
+   (condition "A.Type == 'Via' && B.Type == 'Via' && A.Net == B.Net"))
+
+# SMD pad to pad clearance (different nets)
+(rule "clearance_pad_to_pad_smd_different_nets"
+   (constraint clearance (min 0.15mm))
+   (condition "A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD' && A.Net != B.Net"))
+(rule "clearance_pad_to_pad_different_nets"
+   (constraint clearance (min 0.15mm))
+   (condition "A.Pad_Type == 'Pad' && B.Pad_Type == 'Pad' && A.Net != B.Net"))
+
+# Pad Hole-to-Hole Spacing
+(rule "clearance_pad_to_pad_through_hole_different_nets"
+   (constraint hole_to_hole (min 0.45mm))
+   (condition "A.Pad_Type == 'Through-hole' && A.Pad_Type == 'Through-hole' && A.Net != B.Net"))
+
+# Pad to track clearance
+(rule "clearance_pad_to_track"
+   (constraint clearance (min 0.1mm))
+   (condition "A.Type == 'Pad' && B.Type == 'Track'"))
+
+# Pad to track clearance
+(rule "clearance_via_to_track"
+   (constraint clearance (min 0.1mm))
+   (condition "A.Type == 'Via' && B.Type == 'Track'"))
+
+# Via hole to Track
+(rule "clearance_via_hole_to_track"
+   (layer outer)
+   (constraint hole_clearance (min 0.2mm))
+   (condition "A.Type == 'Via' && B.Type == 'Track'"))
+
+# Inner layer via hole to copper clearance
+(rule "clearance_via_hole_to_track_inner"
+   (layer inner)
+   (constraint hole_clearance (min 0.0mm))
+   (condition "A.Type == 'Via' && B.Type == 'Track'"))
+
+# PTH to Track
+# 0.35mm is recommended, minimum 0.28mm
+(rule "clearance_pth_hole_to_track"
+   (constraint hole_clearance (min 0.35mm))
+   (condition "A.Pad_Type == 'Through-hole' && B.Type == 'Track'"))
+
+# NPTH to Track
+(rule "clearance_npth_hole_to_track"
+   (constraint hole_clearance (min 0.2mm))
+   (condition "A.Pad_Type == 'NPTH' && B.Type == 'Track'"))
+
+# Min. track width and spacing (1 oz)
+(rule "clearance_track_to_track_1oz"
+   (constraint clearance (min 0.09mm))
+   (condition "A.Type == 'Track' && B.Type == 'Track'"))
+
+# Min. track width and spacing (2 oz)
+# JLCのページだと、track widthとspacingのどちらが0.16mmでどちらが0.2mmなのか分からない
+# (rule "clearance_track_to_track_2oz"
+#    (constraint clearance (min 0.2mm))
+#    (condition "A.Type == 'Track' && B.Type == 'Track'"))
+
+# outline
+(rule "distance_trace_to_outline"
+   (constraint edge_clearance (min 0.3mm))
+   (condition "A.Type == 'Track' || A.Type == 'Pad' || A.Type == 'Via' || A.Type == 'Zone'"))
+
+
+# size
+# Min. track width and spacing (1 oz)
+(rule "size_minimum_track_width_1oz"
+   (constraint track_width (min 0.09mm))
+   (condition "A.Type == 'Track'"))
+
+# Min. track width and spacing (2 oz)
+# (rule "size_minimum_track_width_2oz"
+#    (constraint track_width (min 0.2mm))
+#    (condition "A.Type == 'Track'"))
+
+# Min. Via hole size/diameter から計算すると0.05mmだが、もっと多くとるべき
+(rule "size_annular_via"
+   (constraint annular_width (min 0.13mm))
+   (condition "A.Type == 'Via'"))
+
+# PTH annular ring
+(rule "size_annular_pth"
+   (constraint annular_width (min 0.3mm))
+   (condition "A.Pad_Type == 'Through-hole'"))
+
+# Min. Via hole size/diameter
+# 0.15まで可能だが、0.3mm以下は少なくない追加料金を取られる
+(rule "size_via_drill_hole"
+   (constraint hole_size (min 0.3mm))
+   (condition "A.Type == 'Via'"))
+
+# Min. Via hole size/diameter
+(rule "size_via_diameter"
+   (constraint via_diameter (min 0.25mm)))
+
+# Drill Diameter
+(rule "size_pth_drill_hole"
+   (constraint hole_size (min 0.15mm) (max 6.3mm))
+   (condition "A.Pad_Type == 'Through-hole'"))
+
+(rule "size_npth_drill_hole"
+   (constraint hole_size (min 0.5mm))
+   (condition "A.Pad_Type == 'NPTH'"))
+
+
+# others
+# Blind/Buried Vias
+(rule "forbid_blind_or_buried_via"
+   (constraint disallow buried_via))
+
+(rule "thermal_spoke"
+    (constraint min_resolved_spokes 0))
+
+(rule "thermal_gap"
+	(constraint thermal_relief_gap (min 10mil)))
+
+# Minimum Line Width
+(rule "text_thickness"
+    (constraint text_thickness (min 0.1524mm)))
+
+# Minimum text height
+(rule "text_height"
+    (constraint text_height (min 1mm)))
