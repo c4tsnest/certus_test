@@ -27,7 +27,7 @@
 
 # Pad to track clearance
 (rule "clearance_pad_to_track"
-   (constraint clearance (min 0.1mm))
+   (constraint clearance (min 0.089mm))
    (condition "A.Type == 'Pad' && B.Type == 'Track'"))
 
 # Pad to track clearance
@@ -60,7 +60,7 @@
 
 # Min. track width and spacing (1 oz)
 (rule "clearance_track_to_track_1oz"
-   (constraint clearance (min 0.09mm))
+   (constraint clearance (min 0.089mm))
    (condition "A.Type == 'Track' && B.Type == 'Track'"))
 
 # Min. track width and spacing (2 oz)
@@ -78,7 +78,7 @@
 # size
 # Min. track width and spacing (1 oz)
 (rule "size_minimum_track_width_1oz"
-   (constraint track_width (min 0.09mm))
+   (constraint track_width (min 0.089mm))
    (condition "A.Type == 'Track'"))
 
 # Min. track width and spacing (2 oz)
