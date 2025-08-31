@@ -8,9 +8,9 @@
    (condition "A.Net != B.Net"))
 
 # Via Hole-to-Hole Spacing
-(rule "clearance_via_to_via_same_nets"
+(rule "clearance_via_to_via"
    (constraint hole_to_hole (min 0.2mm))
-   (condition "A.Type == 'Via' && B.Type == 'Via' && A.Net == B.Net"))
+   (condition "A.Type == 'Via' && B.Type == 'Via'"))
 
 # SMD pad to pad clearance (different nets)
 (rule "clearance_pad_to_pad_smd_different_nets"

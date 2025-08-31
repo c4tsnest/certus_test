@@ -3444,6 +3444,296 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Q_NMOS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "N-MOSFET transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NMOS N-MOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Q_NMOS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_NMOS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -13041,6 +13331,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 383.54) (xy 67.31 383.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cdb90d4-cae0-4161-89ae-90375430c396")
+	)
+	(wire
+		(pts
 			(xy 227.33 265.43) (xy 224.79 265.43)
 		)
 		(stroke
@@ -15941,6 +16241,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 375.92) (xy 74.93 378.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a62e8005-2db2-4ddf-861c-867c73565c85")
+	)
+	(wire
+		(pts
 			(xy 68.58 255.27) (xy 71.12 255.27)
 		)
 		(stroke
@@ -16168,6 +16478,16 @@
 			(type default)
 		)
 		(uuid "af5daa53-d4cf-4b9b-8bc5-9896da37e4af")
+	)
+	(wire
+		(pts
+			(xy 74.93 389.89) (xy 74.93 388.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b05468e4-6444-4a3e-a03b-43179789dbac")
 	)
 	(wire
 		(pts
@@ -17591,7 +17911,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 383.54) (xy 64.77 383.54)
+			(xy 49.53 383.54) (xy 58.42 383.54)
 		)
 		(stroke
 			(width 0)
@@ -22790,7 +23110,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 74.93 388.62 0)
+		(at 74.93 389.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22799,7 +23119,7 @@
 		(fields_autoplaced yes)
 		(uuid "111a28ad-f625-46df-a900-3f2c7ec2c960")
 		(property "Reference" "#PWR076"
-			(at 74.93 394.97 0)
+			(at 74.93 396.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22808,7 +23128,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 393.7 0)
+			(at 74.93 394.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22816,7 +23136,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 388.62 0)
+			(at 74.93 389.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22825,7 +23145,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 388.62 0)
+			(at 74.93 389.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22834,7 +23154,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 388.62 0)
+			(at 74.93 389.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24281,16 +24601,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 68.58 383.54 90)
+		(at 62.23 383.54 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "24ea2813-c644-46d8-a585-0cc7824c1bac")
 		(property "Reference" "R30"
-			(at 68.58 377.19 90)
+			(at 62.23 389.89 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24298,7 +24618,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 68.58 379.73 90)
+			(at 62.23 387.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24306,7 +24626,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
-			(at 68.58 385.318 90)
+			(at 62.23 381.762 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24315,7 +24635,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 68.58 383.54 0)
+			(at 62.23 383.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24324,7 +24644,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 68.58 383.54 0)
+			(at 62.23 383.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32239,7 +32559,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:Texas_B3QFN-14-1EP_5x5.5mm_P0.65mm_ThermalVia"
+		(property "Footprint" "Local:Texas_B3QFN-14-1EP_5x5.5mm_P0.65mm_ThermalVia"
 			(at 68.58 62.23 0)
 			(effects
 				(font
@@ -32826,7 +33146,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_SlimStack_52991-0408_2x20_P0.50mm_Vertical"
+		(property "Footprint" "Local:Molex_SlimStack_52991-0408_2x20_P0.50mm_Vertical"
 			(at 384.81 298.45 0)
 			(effects
 				(font
@@ -34491,6 +34811,79 @@
 			(project "CertusNX"
 				(path "/809f207a-02f3-4831-9f3a-c9960499091a"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Q_NMOS")
+		(at 72.39 383.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbe71eb8-f7b7-4609-b487-0e668bb85560")
+		(property "Reference" "Q1"
+			(at 78.74 382.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NMOS"
+			(at 78.74 384.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 77.47 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 72.39 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor"
+			(at 72.39 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "D"
+			(uuid "8ebe9161-c207-4f72-bb42-217fbfaa7e22")
+		)
+		(pin "S"
+			(uuid "db382b3a-8e08-422f-9084-80d809149d6b")
+		)
+		(pin "G"
+			(uuid "d366270b-3974-4500-96ab-4c93b70d1e76")
+		)
+		(instances
+			(project ""
+				(path "/809f207a-02f3-4831-9f3a-c9960499091a"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -36455,6 +36848,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 367.03 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e777807d-d3ea-4a5a-b4e4-4c1323e31fed")
+		(property "Reference" "H4"
+			(at 369.57 163.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 369.57 166.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 367.03 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 367.03 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 367.03 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "CertusNX"
+				(path "/809f207a-02f3-4831-9f3a-c9960499091a"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 285.75 251.46 0)
 		(unit 1)
@@ -37047,7 +37504,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_SlimStack_52991-0408_2x20_P0.50mm_Vertical"
+		(property "Footprint" "Local:Molex_SlimStack_52991-0408_2x20_P0.50mm_Vertical"
 			(at 436.88 298.45 0)
 			(effects
 				(font
